@@ -39,7 +39,7 @@ int main (int argc,const char *argv[]) {
 
 	for (;;) {
 		printf("> ");
-		print(eval(read(stdin),n));
+		l_print(l_eval(l_read(stdin),n));
 		printf("\n");
 	}
 	return 0;

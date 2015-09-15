@@ -49,3 +49,19 @@ typedef struct lfun {
 	atom *args;
 	acons *body;
 } lfun;
+
+atom *l_newcons(atom *car,atom *cdr);
+lcons *l_ccons(atom *x);
+atom *l_newint(int i);
+lint *l_cint(atom *x);
+atom *l_newchar(char c);
+lchar *l_cchar(atom *x);
+atom *l_newstring(char *s);
+lstring *l_cstring(atom *x);
+atom *l_newsym(char *s);
+lsym *l_csym(atom *x);
+nspace *l_bind(nspace *head,lsym *name,atom *link);
+atom *l_newax(atom *(*a)(lcons*,nspace*));
+lax *l_cax(atom *x);
+atom *l_newfun(atom *args,lcons *body,nspace *n);
+lfun *l_cfun(atom *x);
